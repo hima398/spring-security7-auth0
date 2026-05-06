@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    <img th:if="${picture}" th:src="${picture}" alt="Profile picture" width="100">
+    <p>Name: <span th:text="${name}">Name</span></p>
+    <p>Email: <span th:text="${email}">Email</span></p>
+    <p><a th:href="@{/home}">Home</a></p>
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
